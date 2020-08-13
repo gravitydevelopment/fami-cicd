@@ -1,7 +1,14 @@
 pipeline {
     agent any
     stages {
-    
+
+        stage("envSetup") {
+        
+            steps {
+                echo 'Test environment setup phase'
+            }
+        }
+        
         stage("build") {
         
             steps {
