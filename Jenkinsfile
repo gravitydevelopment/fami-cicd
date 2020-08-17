@@ -3,11 +3,13 @@ pipeline {
 	
     stages {
 
-        stage("Env Step : Credential Verification") {
+        stage("Environment Setup") {
 			
 		    steps {
-			    echo 'Verify AWS Access Credential'
+			    echo 'Setup Kubernetes on cloud AWS EKS'
 				bat 'terraform init -input=false'
+				bat 'terraform plan'
+				bat 'terraform apply -auto-approve' 
             }
             
         }
