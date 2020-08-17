@@ -7,7 +7,7 @@ pipeline {
 			
 		    steps {
 			    echo 'Verify AWS Access Credential'
-				sh 'terraform init -input=false'
+				bat 'terraform init -input=false'
             }
             
         }
