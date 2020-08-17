@@ -6,8 +6,8 @@ pipeline {
         stage("Env Step : Credential Verification") {
 			
 		    steps {
-			
 			    echo 'Verify AWS Access Credential'
+				sh 'terraform init -input=false'
             }
             
         }
