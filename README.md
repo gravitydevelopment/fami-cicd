@@ -10,4 +10,15 @@ Below are the requirement for your environment before started to run the JenkinF
 - Terraform installed in your local. 
 - Kubernetes installed in your local
 - Kubectl installed in your local
+- Jenkins installed and configured in your local 
+
+# How to start
+- Access your jenkins, create a new project by selecting the "Multibranch Pipeline".
+- At project configuration, configure the branch Sources as using a Git hub.
+- Set and assign your github credential in "Credential" option
+- Set the repositories url as: https://github.com/gravitydevelopment/fami-cicd
+- Move to "Build Configuration" section, select Mode as : "by Jenkinsfile" and set the "Script Path" as : "Jenkinsfile".
+- Save the setting.
+- At the project main display, click the option "Scan Repository Now" on the left pane.
+- Jenkins will pull the repository artifacts to your local and execute the jenkins pipeline based on the provide JenkinsFile in the repositories.
 
